@@ -1,3 +1,34 @@
+<script>
+export default {
+    data() {
+        return {
+            shortcutsList: [
+                {
+                    logo: '../assets/img/buy-comics-digital-comics.png',
+                    name: 'DIGITAL COMICS'
+                },
+                {
+                    logo: '../assets/img/buy-comics-merchandise.png',
+                    name: 'DC MERCHANDISE'
+                },
+                {
+                    logo: './assets/img/buy-comics-subscriptions.png',
+                    name: 'SUBSCRIPTION'
+                },
+                {
+                    logo: '../assets/img/buy-comics-shop-locator.png',
+                    name: 'COMICS SHOP LOCATOR'
+                },
+                {
+                    logo: '../assets/img/buy-dc-power-visa.svg',
+                    name: 'DC POWER VISA'
+                },
+            ]
+        }
+    }
+}
+</script>
+
 <template>
     <div class="container-main">
         <section class="card">
@@ -7,11 +38,10 @@
         </section>
         <section class="shortcuts">
             <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
+                <li v-for="item in shortcutsList">
+                    <img :src="item.logo" alt="logo-shortcuts">
+                    <p>{{ item.name }}</p>
+                </li>
             </ul>
         </section>
     </div>
