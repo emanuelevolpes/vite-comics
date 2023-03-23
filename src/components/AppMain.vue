@@ -4,23 +4,23 @@ export default {
         return {
             shortcutsList: [
                 {
-                    logo: '../assets/img/buy-comics-digital-comics.png',
+                    logo: '../public/img/buy-comics-digital-comics.png',
                     name: 'DIGITAL COMICS'
                 },
                 {
-                    logo: '../assets/img/buy-comics-merchandise.png',
+                    logo: '../public/img/buy-comics-merchandise.png',
                     name: 'DC MERCHANDISE'
                 },
                 {
-                    logo: './assets/img/buy-comics-subscriptions.png',
+                    logo: './public/img/buy-comics-subscriptions.png',
                     name: 'SUBSCRIPTION'
                 },
                 {
-                    logo: '../assets/img/buy-comics-shop-locator.png',
+                    logo: '../public/img/buy-comics-shop-locator.png',
                     name: 'COMICS SHOP LOCATOR'
                 },
                 {
-                    logo: '../assets/img/buy-dc-power-visa.svg',
+                    logo: '../public/img/buy-dc-power-visa.svg',
                     name: 'DC POWER VISA'
                 },
             ]
@@ -40,7 +40,7 @@ export default {
             <ul>
                 <li v-for="item in shortcutsList">
                     <img :src="item.logo" alt="logo-shortcuts">
-                    <p>{{ item.name }}</p>
+                    <span>{{ item.name }}</span>
                 </li>
             </ul>
         </section>
@@ -71,7 +71,16 @@ export default {
 }
 
 .shortcuts>ul>li {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1.875rem 3.125rem;
+}
+
+.shortcuts>ul>li>img {
+    width: 3.75rem;
+    height: 3.75rem;
+    object-fit: contain;
+    margin-right: 5px;
 }
 </style>

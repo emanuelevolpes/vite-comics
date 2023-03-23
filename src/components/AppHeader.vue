@@ -66,7 +66,7 @@ export default {
         </div>
         <div class="nav-header">
             <ul>
-                <li v-for="item in headerNavList"><a :href="item.link">{{ item.name }}</a></li>
+                <li v-for="item in headerNavList">{{ item.name }}</li>
             </ul>
         </div>
     </div>
@@ -96,12 +96,7 @@ ul>li {
 
 ul>li:hover {
     border-bottom: 4px solid #0282f9;
-    color: #0282f9;
     cursor: pointer;
-}
-
-ul>li>a {
-    text-decoration: none;
-    color: #303030;
+    color: #0282f9;
 }
 </style>
