@@ -1,5 +1,62 @@
 <script>
-
+export default {
+    data() {
+        return {
+            headerNavList: [
+                {
+                    name: 'CHARACTERS',
+                    link: '#',
+                    target: '_self'
+                },
+                {
+                    name: 'COMICS',
+                    link: '#',
+                    target: '_self'
+                },
+                {
+                    name: 'MOVIES',
+                    link: '#',
+                    target: '_self'
+                },
+                {
+                    name: 'TV',
+                    link: '#',
+                    target: '_self'
+                },
+                {
+                    name: 'GAMES',
+                    link: '#',
+                    target: '_self'
+                },
+                {
+                    name: 'COLLECTIBLES',
+                    link: '#',
+                    target: '_self'
+                },
+                {
+                    name: 'VIDEOS',
+                    link: '#',
+                    target: '_self'
+                },
+                {
+                    name: 'FANS',
+                    link: '#',
+                    target: '_self'
+                },
+                {
+                    name: 'NEWS',
+                    link: '#',
+                    target: '_self'
+                },
+                {
+                    name: 'SHOP',
+                    link: '#',
+                    target: '_self'
+                }
+            ]
+        }
+    }
+}
 </script>
 
 <template>
@@ -9,16 +66,7 @@
         </div>
         <div class="nav-header">
             <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
-                <li>10</li>
+                <li v-for="item in headerNavList"><a :href="item.link">{{ item.name }}</a></li>
             </ul>
         </div>
     </div>
@@ -42,5 +90,18 @@ ul {
 ul>li {
     display: inline-block;
     margin-right: 1.875rem;
+    height: 111px;
+    line-height: 111px;
+}
+
+ul>li:hover {
+    border-bottom: 4px solid #0282f9;
+    color: #0282f9;
+    cursor: pointer;
+}
+
+ul>li>a {
+    text-decoration: none;
+    color: #303030;
 }
 </style>
