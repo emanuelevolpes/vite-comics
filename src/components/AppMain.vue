@@ -1,5 +1,10 @@
 <script>
+import ProductsList from './ProductsList.vue';
+
 export default {
+    components: {
+        ProductsList
+    },
     data() {
         return {
             shortcutsList: [
@@ -32,9 +37,7 @@ export default {
 <template>
     <div class="container-main">
         <section class="card">
-            <div class="card-content">
-                <h1>Content goes here</h1>
-            </div>
+            <ProductsList></ProductsList>
         </section>
         <section class="shortcuts">
             <ul>
@@ -48,15 +51,6 @@ export default {
 </template>
 
 <style scoped>
-.card-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    height: 8.125rem;
-    color: white;
-}
-
 .shortcuts {
     display: flex;
     background-color: #0282f9;
